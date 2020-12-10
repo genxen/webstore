@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-md-6">
+    <h2>{{company?.name}}</h2>
+    <p>{{company?.desc}}</p>
+    <div class="address" *ngIf="isShownDetails && company?.address?.lines?.length">
+      <p class="line" *ngFor="let l of company.address.lines">
+          {{l}}
+      </p>
+    </div>
+    
+    <p *ngIf="!isShownDetails"><span class="btn btn-secondary" href="#" role="button" (click)="showDetails()">En savoir plus &raquo;</span></p>
+  </div>
+  <div class="col-md-6">
+    <h2>Contactez</h2>
+    <p>{{company?.contact}}</p>
+    <p><a class="btn btn-secondary" href="#" role="button">En savoir plus &raquo;</a></p>
+  </div>
+</div>

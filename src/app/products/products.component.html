@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col-md-7">
+        <h2>Liste des produits</h2>
+        <app-spinner title="Connexion au WebService" message="Chargement des produits en cours" *ngIf="!showProducts(); else productsTemplate"></app-spinner
+            >
+        <ng-template #productsTemplate>
+            <div class="products">
+                <div (click)="selectProduct(p)" class="product alert" [class.alert-danger]="p==selectedProduct" [class.alert-warning]="p!=selectedProduct" *ngFor="let p of products">
+                    {{p.id | highlight}} - {{p.name}} - {{p.price | highlight:'[ ':' ]'}}
+                </div>
+            </div>
+        </ng-template>
+    </div>
+    <div class="col-md-5">
+        <h2>Formulaire produit</h2>
+        <app-product-form (delete)="productDeleted($event)" (create)="productCreated($event)" [product]="selectedProduct"></app-product-form>
+    </div>
+    <div class="col-md-6">
+        <h2>Fiche 1er produit</h2>
+        <app-product-detail *ngIf="!firstProductDetailClose" (close)="closeFirstWindow($event)" [product]="products[0]" comment="1er produit"></app-product-detail>
+    </div>
+    <div class="col-md-6">
+        <h2>Fiche produit sélectionné</h2>
+        <app-product-detail loadMessage="Sélectionnez un produit" *ngIf="!selectedProductClosed" (close)="selectedProductClosed=$event;" [product]="selectedProduct" [comment]="myComment"></app-product-detail>
+    </div>
+</div>

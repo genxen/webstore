@@ -1,0 +1,50 @@
+{
+    "user": {
+        "login": "Cyril"
+        , "password": "toto"
+    }
+    , "categories": [
+        {
+            "id": 1
+            , "name": "Aliment"
+        }
+        , {
+            "id": 2
+            , "name": "Petit électro"
+        }
+    ]
+    , "products": [
+        {
+            "id": 1
+            , "idCat": 1
+            , "price": 2.99
+            , "name": "Pommes de Normandie"
+            , "desc": "Sans doute les meilleures pommes du monde!"
+            , "image": "pommes.jpg"
+        }
+        ,{
+            "id": 33800
+            , "idCat": 1
+            , "price": 19.99
+            , "name": "Bordeaux grand cru"
+            , "desc": "Sans doute le meilleur Bordeaux du monde!"
+            , "image": "vin.jpg"
+        }
+        ,{
+            "id": 13666
+            , "idCat": 1
+            , "price": 0.99
+            , "name": "Canelé bordelais"
+            , "desc": "Sans doute le meilleur Canelé du monde!"
+            , "image": "defaut.jpg"
+        }
+        ,{
+            "id": 2001
+            , "idCat": 2
+            , "price": 499.99
+            , "name": "Drône de l'espace"
+            , "desc": "Sans doute le meilleur drône de l'espace du monde!"
+            , "image": "robot.png"
+        }
+    ]
+}

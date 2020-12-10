@@ -1,0 +1,85 @@
+<div class="card product form" *ngIf="product && categories">
+    <div class="card-header text-center">
+        Formulaire produit
+    </div>
+    <div class="card-body">
+        <span class="card-title">Modifier le produit</span>
+
+        <form #f="ngForm">
+
+        <div class="form-group row">
+            <label for="id" class="col-md-2 col-form-label">Id</label>
+            <div class="col-md-10">
+            <input type="number" readonly class="form-control" id="id" name="id" [(ngModel)]="product.id">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="idCat" class="col-md-2 col-form-label">Catégorie</label>
+            <div class="col-md-10">
+                <select class="form-control" id="idCat" name="idCat" [(ngModel)]="product.idCat" #idCat="ngModel">
+                    <option value="">Choisissez une catégorie...</option>
+                    <option *ngFor="let c of categories" value="{{c.id}}">{{c.name}}</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="name" class="col-md-2 col-form-label">Nom</label>
+            <div class="col-md-10">
+            <input type="text" class="form-control" id="name" name="name" [(ngModel)]="product.name" #name="ngModel" required minlength="3" pattern="[A-Z0-9].+">
+            </div>
+        </div>
+        <app-error-message *ngIf="name?.errors" title="erreur sur le nom" message="Remplis ton nom correctement... Chti diou!"></app-error-message>
+        <app-error-message *ngIf="name?.errors?.pattern" title="Format du nom" message="Le nom doit commencer par une majuscule ou un chiffre..."></app-error-message>
+        <app-error-message *ngIf="name?.errors?.minlength" title="Taille du nom" message="Le nom fait au moins 3 caractères..."></app-error-message>
+        <app-error-message *ngIf="name?.errors?.required" title="Nom obligatoire" message="Le nom nom est obligatoire..."></app-error-message>
+
+        <div class="form-group row">
+            <label for="price" class="col-md-2 col-form-label">Prix</label>
+            <div class="col-md-10">
+            <input min="{{priceMin}}" max="{{priceMax}}" step="0.01" type="number" required class="form-control" id="price" [(ngModel)]="product.price" name="price" #price="ngModel">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="desc" class="col-md-2 col-form-label">Description</label>
+            <div class="col-md-10">
+            <input type="text" class="form-control" id="desc" [(ngModel)]="product.desc"  name="desc" #desc="ngModel">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="image" class="col-md-2 col-form-label">Image</label>
+            <div class="col-md-10">
+            <input type="text" class="form-control" id="image" [(ngModel)]="product.image" required pattern=".*\.(jpg|jpeg|png)" name="image" #image="ngModel" minlength="5" maxlength="35">
+    <!--
+            <div *ngIf="image.errors?.pattern">L'image doit être un JPG ou un PNG</div>
+            <div *ngIf="image.errors?.required">L'image obligatoire!</div>
+            <div *ngIf="image.errors?.minlength">L'image est trop courte!</div>
+            <div *ngIf="image.errors?.maxlength">L'image est trop longue!</div>
+            <div *ngIf="image.invalid">Le champ image est non valide</div>
+            <div *ngIf="image.valid">Le champ image est valide</div>
+            <div *ngIf="image.touched">Tu as touché l'image</div>
+            <div *ngIf="image.untouched">L'image n'a pas été touchée</div>
+            <div *ngIf="image.pristine">L'image est vierge</div>
+            <div *ngIf="image.dirty">L'image est sale</div>
+    -->
+            </div>
+        </div>
+        <div class="buttons col-12">
+            <!-- <button [attr.disabled]="product.id?null:'disabled'" class="btn btn-info">Ajouter</button> -->
+            <button [disabled]="!product.id" class="btn btn-info" (click)="newProduct()">Nouveau</button>
+            <button [disabled]="f.invalid" class="btn btn-success" (click)="saveProduct()">Sauvegarder</button>
+            <button [disabled]="!product.id" class="btn btn-danger" (click)="deleteProduct()">Supprimer</button>
+            <button class="btn btn-warning" (click)="resetProduct()">Réinit</button>
+            <button [disabled]="!product.id" class="btn btn-primary" (click)="reloadProduct()">Recharger</button>
+        </div>
+        </form>
+        
+        <hr>
+        <a routerLink="/fiche-produit/{{product?.id}}" class="btn btn-primary">Fiche</a>
+    </div>
+    <div class="card-footer text-muted">
+        Formulaire de modification d'un produit
+    </div>
+</div>

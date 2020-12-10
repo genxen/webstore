@@ -1,0 +1,13 @@
+p::first-letter {
+    color: indigo;
+    font-weight: bold;
+}
+label {
+    font-weight: bold;
+    min-width: 15rem;
+    font-variant: small-caps;
+    color: indigo;
+}
+label::after {
+    content: ':';
+}

@@ -1,0 +1,61 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <a class="navbar-brand" routerLink="/">Webstore</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="menu">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/accueil">Accueil</a>
+      </li>
+      <li class="nav-item dropdown" routerLinkActive="active">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Boutique</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown01">
+
+          <div class="dropdown-header">Général</div>
+          <a routerLinkActive="active" class="dropdown-item" routerLink="/boutique">Tous les produits</a>
+          <a routerLinkActive="active" class="dropdown-item" routerLink="/tout-choco">Tout choco</a>
+          <a routerLinkActive="active" class="dropdown-item" routerLink="/10-premiers-produits" [queryParams]="{_limit: 10, _page: 1}">10 premiers produits</a>
+
+          <app-cat-submenu [categories]="categories"></app-cat-submenu>
+
+        </div>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/a-propos">A propos</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/aide">Aide</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+        <label for="search" class="sr-only">Recherche</label>
+      <input id="search" class="form-control mr-sm-2" type="text" placeholder="Recherche" aria-label="Recherche">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Trouver</button>
+    </form>
+  </div>
+</nav>
+
+<main>
+
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-3">{{title}} {{showVersion()}}</h1>
+      <p>La boutique en ligne</p>
+      <p><a class="btn btn-primary btn-lg" href="#" role="button">En savoir plus &raquo;</a></p>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Example row of columns -->
+    <router-outlet></router-outlet>
+
+    <hr>
+
+  </div> <!-- /container -->
+
+</main>
+
+<app-footer></app-footer>

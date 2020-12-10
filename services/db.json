@@ -1,0 +1,295 @@
+{
+  "user": {
+    "name": "Cyril B.",
+    "login": "cball",
+    "password": "coucou"
+  },
+  "categories": [
+    {
+      "id": 1,
+      "name": "Aliment",
+      "desc": "Sans doute les meilleurs aliments du monde !"
+    },
+    {
+      "id": 2,
+      "name": "Gros électro",
+      "desc": "Sans doute les meilleurs produits d'électroménager du monde !"
+    },
+    {
+      "id": 3,
+      "name": "Petit électro",
+      "desc": "Tous nos produits d'électroménager petits !"
+    },
+    {
+      "id": 4,
+      "name": "Jardin",
+      "desc": "Tous nos produits de jardin !"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "idCat": 1,
+      "price": 2.99,
+      "name": "Pommes de Normandie",
+      "desc": "Sans doute les meilleures pommes du monde!",
+      "image": "pommes.jpg"
+    },
+    {
+      "idCat": 1,
+      "price": 3.99,
+      "name": "Beurre de Normandie",
+      "desc": "Sans doute le meilleur beurre doux du monde!",
+      "image": "beurre-doux.jpg",
+      "id": 154
+    },
+    {
+      "id": 3,
+      "idCat": 1,
+      "price": 3.99,
+      "name": "Salade de nos campagnes",
+      "desc": "Que diriez-vous d'une belle salade bien croquante en cette saison ?",
+      "image": "salades.jpg"
+    },
+    {
+      "id": 4,
+      "idCat": 2,
+      "price": 1199.9,
+      "name": "Machine à laver Whirl...",
+      "desc": "Une des meilleures machines à laver du moment !",
+      "image": "machinesalaver.jpg"
+    },
+    {
+      "id": 5,
+      "idCat": 3,
+      "price": 34.99,
+      "name": "Fer à repasser",
+      "desc": "Un très bon fer à repasser équipé de sa centrale vapeur...",
+      "image": "default.jpg"
+    },
+    {
+      "id": 7,
+      "idCat": 1,
+      "price": 19.95,
+      "name": "Entrecôte",
+      "desc": "De belles entrecôtes persillées et goûtues, issues de race à viande !",
+      "image": "viandes.jpg"
+    },
+    {
+      "id": 8,
+      "idCat": 1,
+      "price": 45,
+      "name": "Framboises surgelées",
+      "desc": "Toutes fraiches cueillies, aussitôt congelées !",
+      "image": "surgeles.jpg"
+    },
+    {
+      "id": 9,
+      "idCat": 3,
+      "price": 79.9,
+      "name": "Machine à expresso",
+      "desc": "Une superbe machine à expresso qui ravira vos papilles autant que vos yeux !",
+      "image": "expresso.jpg"
+    },
+    {
+      "id": 10,
+      "idCat": 3,
+      "price": 44.99,
+      "name": "Machine à chocolat",
+      "desc": "Faites vous-même, à la maison un chocolat onctueux et savoureux comme au salon de thé !",
+      "image": "machinechoco.jpg"
+    },
+    {
+      "id": 11,
+      "idCat": 1,
+      "price": 9.99,
+      "name": "Légumes frais",
+      "desc": "Recevez, chez vous, un panier de légumes de saison à quantité variable selon la production du producteur !",
+      "image": "legumes.jpg"
+    },
+    {
+      "id": 12,
+      "idCat": 1,
+      "price": 1.99,
+      "name": "Yahourt maison",
+      "desc": "Goûtez nos délicieux yahourts maison !",
+      "image": "yahourts.jpg"
+    },
+    {
+      "id": 13,
+      "idCat": 2,
+      "price": 2399.99,
+      "name": "Réfrigérateur américain",
+      "desc": "Enfin un réfrigérateur américain qui ne vous laissera pas en panne de glaçons...",
+      "image": "refrigerateur.jpg"
+    },
+    {
+      "id": 14,
+      "idCat": 3,
+      "price": 25,
+      "name": "Sèche cheveux",
+      "desc": "Un superbe sèche cheveux pour femme au design envoûtant !",
+      "image": "sechecheveux.jpg"
+    },
+    {
+      "id": 15,
+      "idCat": 1,
+      "price": 4.99,
+      "name": "Expresso italien",
+      "desc": "le meilleur expresso au monde !",
+      "image": ""
+    },
+    {
+      "id": 16,
+      "idCat": 1,
+      "price": 4.5,
+      "name": "12 pains au chocolat",
+      "desc": "Des pains au chocolat tout chauds, pour toute la famille, chaque matins !",
+      "image": ""
+    },
+    {
+      "id": 17,
+      "idCat": 1,
+      "price": 0.99,
+      "name": "Chocolat noir 72%",
+      "desc": "Un chocolat idéal pour le café.",
+      "image": ""
+    },
+    {
+      "id": 18,
+      "idCat": 1,
+      "price": 49.99,
+      "name": "Poires du Périgord",
+      "desc": "Les meilleures poires du monde !",
+      "image": ""
+    },
+    {
+      "id": 19,
+      "idCat": 1,
+      "price": 2.55,
+      "name": "Patates",
+      "desc": "sans doute les meilleures patates du monde",
+      "image": ""
+    },
+    {
+      "idCat": 1,
+      "name": "Pêches du Roussillon",
+      "price": 5.55,
+      "desc": "Sans doute les meilleures pêches du monde",
+      "image": "",
+      "id": 21
+    },
+    {
+      "idCat": 1,
+      "price": 2.99,
+      "name": "Pommes du Maroc",
+      "desc": "les meilleures pommes du monde!",
+      "image": "pommes.jpg",
+      "id": 129
+    },
+    {
+      "id": 687,
+      "price": 1999.99,
+      "idCat": 2,
+      "name": "Machine à laver Whirlpool",
+      "image": "machine-a-laver.jpg",
+      "desc": "Sans doute la meilleure machine à laver du monde !"
+    },
+    {
+      "price": 3999.99,
+      "idCat": 3,
+      "name": "Machine à sècher le linge Whirlpool",
+      "image": "",
+      "desc": "Sans doute la meilleure machine à sècher du monde !",
+      "id": 3222
+    },
+    {
+      "price": 29.99,
+      "idCat": 3,
+      "name": "Crêpière Bretonne",
+      "desc": "Sans doute la meilleure crêpière du monde !",
+      "id": 12666
+    },
+    {
+      "idCat": "2",
+      "name": "Poires de Normandie",
+      "price": 17.99,
+      "desc": "Sans doute les meilleures poires du monde!",
+      "image": "poires.jpg",
+      "id": 12667
+    },
+    {
+      "idCat": 1,
+      "name": "Champignons de Paris",
+      "price": 99.99,
+      "desc": "ok",
+      "image": "champi.jpg",
+      "id": 12668
+    },
+    {
+      "idCat": 3,
+      "name": "Poires de Bretagne",
+      "price": 1,
+      "desc": "Sans doute les meilleures poires du monde!",
+      "image": "poires.jpg",
+      "id": 12669
+    },
+    {
+      "id": 33800,
+      "idCat": 1,
+      "price": 199.99,
+      "name": "Bordeaux grand cru",
+      "desc": "Sans doute le meilleur Bordeaux du monde!",
+      "image": "vin.jpg"
+    },
+    {
+      "id": 13666,
+      "idCat": 1,
+      "price": 0.99,
+      "name": "Canelé bordelais",
+      "desc": "Sans doute le meilleur Canelé du monde!",
+      "image": "defaut.jpg"
+    },
+    {
+      "id": 2001,
+      "idCat": 3,
+      "price": 499.99,
+      "name": "Drône de l'espace",
+      "desc": "Sans doute le meilleur drône de l'espace du monde!",
+      "image": "robot.png"
+    },
+    {
+      "id": 33803,
+      "idCat": 1,
+      "price": 9.99,
+      "name": "Bordeaux petit cru",
+      "desc": "Sans doute le pire Bordeaux du monde!",
+      "image": "vin.jpg"
+    },
+    {
+      "id": 33804,
+      "idCat": 1,
+      "price": 0.01,
+      "name": "Beurre de Bretagne",
+      "desc": "Sans doute le meilleur beurre salé du monde!",
+      "image": "beurre-sale.jpg"
+    },
+    {
+      "id": 33805,
+      "idCat": 1,
+      "price": 9999.99,
+      "name": "Charrue électrique",
+      "desc": "Sans doute...",
+      "image": "defaut.jpg"
+    },
+    {
+      "id": 33806,
+      "idCat": 1,
+      "price": 99.99,
+      "name": "Nain connu",
+      "desc": "Sans doute le plus beau nain du monde!",
+      "image": "defaut.jpg"
+    }
+  ],
+  "contacts": []
+}

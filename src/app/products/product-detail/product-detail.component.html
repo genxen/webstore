@@ -1,0 +1,21 @@
+<app-spinner [message]="loadMessage" *ngIf="!product; else productTemplate"></app-spinner
+    >
+<ng-template #productTemplate>
+    <div class="card product">
+        <div class="card-body">
+            <div class="card-title">{{product?.name}}</div>
+            <p class="card-text debug">idCat: {{product?.idCat}}</p>
+            <p class="card-text">Catégorie: {{catName()}}</p>           
+            <p class="card-text">Prix: {{product?.price}}</p>
+            <p class="card-text">{{product?.desc}}</p>
+        </div>
+        <img class="card-img-bottom" src="/assets/images/produits/{{product?.image}}" alt="{{product?.name}}" title="{{product?.desc}}">
+        <div class="card-footer" *ngIf="comment && (''!=comment)">
+            <p class="card-text">{{comment}}</p>
+        </div>
+    </div>
+    <p class="row">
+        <a class="col-6 btn btn-primary" routerLink="/formulaire-produit/{{product?.id}}" role="button">Accès au formulaire &raquo;</a>
+        <span class="col-6 btn btn-secondary" role="button" (click)="closeWindow()">Fermer détail</span>
+    </p>
+</ng-template>

@@ -1,0 +1,11 @@
+.card-title {
+    font-weight: bold;
+    font-variant: small-caps;
+    text-align: center;
+    color: indigo;
+    font-size: 1.8rem;
+    border-bottom: 0.08rem solid indigo;
+}
+.row {
+    padding: 0 1rem;
+}
